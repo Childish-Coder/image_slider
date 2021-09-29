@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image slider</title>
+		<link rel="stylesheet" href="src/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<img src="images/snow.png" alt="Loading" class="image" />
+			<section class="list">
+				<img onmouseover="change('mountains')" src="images/mountains.png" alt="1" />
+				<img onmouseover="change('city')" src="images/city.png" alt="2" />
+				<img onmouseover="change('forest')" src="images/forest.png" alt="3" />
+				<img onmouseover="change('beach')" src="images/beach.png" alt="4" />
+				<img onmouseover="change('snow')"src="images/snow.png" alt="5" />
+			</section>
+		</div>
+		<script>
+			const image = document.querySelector(".image")
+
+			function change(name) {
+				image.src = `images/${name}.png`
+			}
+		</script>
+	</body>
+</html>
